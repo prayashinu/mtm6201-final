@@ -31,8 +31,7 @@ h1 {
 
 /* Banner Section */
 .banner {
-    background-image: url('../images/banner.jpg');
-    /* Path to your banner image */
+    background-image: url('../images/banner.png');
     background-size: cover;
     background-position: center;
     height: 70vh;

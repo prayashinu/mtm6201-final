@@ -75,5 +75,5 @@ Open any of the HTML files in a browser (e.g., index.html).
 Make sure all assets are located in the /assets folder and properly linked.
 
 Live Demo
-
+https://prayashinu.github.io/mtm6201-final/
 
