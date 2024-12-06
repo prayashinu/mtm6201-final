@@ -1,0 +1,193 @@
+/* Mobile-first styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+.card {
+    border: none;
+}
+
+.logo-img {
+    height: 100px;
+    width: 50%;
+    border-radius: 80%;
+}
+
+.logo-head {
+    display: inline-block;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Banner Section */
+.banner {
+    background-image: url('../images/banner.jpg');
+    /* Path to your banner image */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    /* Initial height for mobile */
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for contrast */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.banner-content h1 {
+    font-size: 2rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.banner-content a {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.banner-content a:hover {
+    background-color: royalblue;
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for transform and box-shadow */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    /* Lift the card slightly */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow for depth */
+}
+
+/* For smooth hover effect on the card footer button */
+.project-card .btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Button hover effect */
+}
+
+.project-card .btn:hover {
+    background-color: #0056b3;
+    /* Darker blue for hover */
+    transform: scale(1.05);
+    /* Slightly enlarge the button */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Larger screens */
+@media (min-width: 768px) {
+    .banner {
+        height: 75vh;
+        /* Increase height for tablet screens */
+    }
+
+    .banner-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .banner-content p {
+        font-size: 1.5rem;
+    }
+
+    .project-card {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        /* Slightly slower transition on larger screens */
+    }
+
+    .project-card:hover {
+        transform: translateY(-15px);
+        /* More pronounced lift on hover for larger screens */
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .banner {
+        height: 80vh;
+        /* Further increase height for large screens */
+    }
+
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .banner-content p {
+        font-size: 1.8rem;
+    }
+
+}
